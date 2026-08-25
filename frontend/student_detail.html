@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student History · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lib/chart.umd.js"></script>
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1 id="studentTitle">Student History</h1>
+                <p>Prediction history over time for this student.</p>
+            </div>
+            <a class="btn secondary" href="students.html">← Back to Students</a>
+        </div>
+
+        <div class="card">
+            <h3>Poor-Risk Probability Over Time</h3>
+            <p class="small muted">Each point is a separate prediction run. A downward trend is a good sign.</p>
+            <canvas id="trendChart" height="90"></canvas>
+        </div>
+
+        <div class="card mt-24">
+            <h3>Full Prediction History</h3>
+            <table class="mt-24">
+                <thead>
+                    <tr><th>Date</th><th>Prediction</th><th>Risk</th><th>Good%</th><th>Avg%</th><th>Poor%</th><th>Cluster</th></tr>
+                </thead>
+                <tbody id="historyTableBody">
+                    <tr><td colspan="7" class="muted">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/student_detail.js"></script>
+</body>
+</html>

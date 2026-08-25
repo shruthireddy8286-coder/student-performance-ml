@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Students</h1>
+                <p>Manage student records and view their latest prediction.</p>
+            </div>
+            <a class="btn" href="add_student.html">+ Add Student</a>
+        </div>
+
+        <div class="card">
+            <input id="searchBox" placeholder="Search by name or roll number…" style="max-width:320px;">
+            <table class="mt-24">
+                <thead>
+                    <tr>
+                        <th>Roll No</th><th>Name</th><th>Dept</th><th>Attendance</th>
+                        <th>Prediction</th><th>Risk</th><th>Cluster</th><th></th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <tr><td colspan="8" class="muted">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>

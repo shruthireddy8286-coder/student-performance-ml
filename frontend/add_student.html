@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Student · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Add Student</h1>
+                <p>Create a student profile, then enter their academic data.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>1. Student Profile</h3>
+                <form id="studentForm">
+                    <label for="roll_number">Roll Number</label>
+                    <input id="roll_number" required>
+
+                    <label for="name">Full Name</label>
+                    <input id="name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email">
+
+                    <div class="grid grid-2" style="gap:12px;">
+                        <div>
+                            <label for="department">Department</label>
+                            <input id="department" placeholder="e.g. CSE">
+                        </div>
+                        <div>
+                            <label for="year">Year</label>
+                            <input id="year" type="number" min="1" max="5">
+                        </div>
+                    </div>
+                    <label for="section">Section</label>
+                    <input id="section" placeholder="e.g. A">
+
+                    <button class="btn full mt-24" type="submit">Save Student</button>
+                </form>
+            </div>
+
+            <div class="card" id="perfCard" style="opacity:0.5;">
+                <h3>2. Academic & Behavioral Data</h3>
+                <p class="small muted">Save the student profile first, then fill this in.</p>
+                <form id="perfForm">
+                    <label>Attendance (%)</label>
+                    <input id="attendance" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Assignment Score (0–100)</label>
+                    <input id="assignment_score" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Internal Exam Marks (0–100)</label>
+                    <input id="internal_marks" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Previous Semester Marks (0–100)</label>
+                    <input id="previous_semester_marks" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Study Hours per Day</label>
+                    <input id="study_hours" type="number" step="0.1" min="0" max="12" disabled>
+
+                    <label>Quiz Score (0–100)</label>
+                    <input id="quiz_score" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Class Participation (0–100)</label>
+                    <input id="participation" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <label>Assignment Completion Rate (%)</label>
+                    <input id="assignment_completion" type="number" step="0.1" min="0" max="100" disabled>
+
+                    <button class="btn full mt-24" type="submit" id="perfSubmit" disabled>Save Academic Data</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/add_student.js"></script>
+</body>
+</html>

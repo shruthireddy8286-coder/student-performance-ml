@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What-If Simulator · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>What-If Simulator</h1>
+                <p>Drag the sliders to see how the prediction changes — nothing here is saved to any student record.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Adjust the values</h3>
+                <div id="slidersWrap"></div>
+            </div>
+
+            <div class="card">
+                <h3>Live Prediction</h3>
+                <div id="liveResult">
+                    <p class="muted small">Adjust a slider to see the prediction update.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/whatif.js"></script>
+</body>
+</html>

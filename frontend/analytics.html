@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lib/chart.umd.js"></script>
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Student Analytics</h1>
+                <p>Deeper view into risk and cluster composition across your class.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Risk Level Breakdown</h3>
+                <canvas id="riskChart" height="220"></canvas>
+            </div>
+            <div class="card">
+                <h3>Cluster Distribution</h3>
+                <canvas id="clusterChart2" height="220"></canvas>
+            </div>
+        </div>
+
+        <div class="card mt-24">
+            <h3>All At-Risk Students (Medium + High)</h3>
+            <table class="mt-24">
+                <thead><tr><th>Roll No</th><th>Name</th><th>Prediction</th><th>Risk</th><th>Last Updated</th></tr></thead>
+                <tbody id="analyticsTableBody"><tr><td colspan="5" class="muted">Loading…</td></tr></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>

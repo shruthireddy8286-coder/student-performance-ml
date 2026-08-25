@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lib/chart.umd.js"></script>
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Overview of student performance, risk levels and clusters.</p>
+            </div>
+            <a class="btn" href="prediction.html">Predict Performance</a>
+        </div>
+
+        <div class="grid grid-4" id="statCards">
+            <div class="card stat-card"><div class="label">Total Students</div><div class="value" id="statTotal">–</div></div>
+            <div class="card stat-card good"><div class="label">High Performers</div><div class="value" id="statHigh">–</div></div>
+            <div class="card stat-card medium"><div class="label">Average Students</div><div class="value" id="statAverage">–</div></div>
+            <div class="card stat-card high"><div class="label">At-Risk Students</div><div class="value" id="statAtRisk">–</div></div>
+        </div>
+
+        <div class="grid grid-2 mt-24">
+            <div class="card">
+                <h3>Performance Distribution</h3>
+                <p class="small muted">Predicted category across all students (Random Forest + ANN combined)</p>
+                <canvas id="perfChart" height="200"></canvas>
+            </div>
+            <div class="card">
+                <h3>Student Clusters (K-Means)</h3>
+                <p class="small muted">Unsupervised grouping by academic + behavioral similarity</p>
+                <canvas id="clusterChart" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="card mt-24">
+            <div class="flex" style="justify-content:space-between;">
+                <h3>At-Risk Students</h3>
+                <span class="small muted" id="avgAttendanceNote"></span>
+            </div>
+            <table class="mt-24">
+                <thead>
+                    <tr><th>Roll No</th><th>Name</th><th>Prediction</th><th>Risk</th><th>Last Updated</th></tr>
+                </thead>
+                <tbody id="atRiskTableBody">
+                    <tr><td colspan="5" class="muted">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

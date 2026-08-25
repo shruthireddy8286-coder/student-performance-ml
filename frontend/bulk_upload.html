@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulk Upload · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lib/papaparse.min.js"></script>
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Bulk Upload Students</h1>
+                <p>Add an entire class at once from a CSV file, instead of one by one.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>1. CSV Format</h3>
+            <p class="small muted">
+                Your CSV needs these exact column headers (order doesn't matter):
+            </p>
+            <p class="mono small" style="background:#F5F7FB; padding:10px; border-radius:8px; overflow-x:auto;">
+                roll_number,name,email,department,year,section,attendance,assignment_score,internal_marks,previous_semester_marks,study_hours,quiz_score,participation,assignment_completion
+            </p>
+            <button class="btn secondary" id="downloadSampleBtn" style="margin-top:10px;">Download Sample CSV</button>
+        </div>
+
+        <div class="card mt-24">
+            <h3>2. Upload Your File</h3>
+            <input type="file" id="csvFile" accept=".csv">
+            <button class="btn mt-24" id="uploadBtn" disabled>Upload Students</button>
+            <div class="error-msg" id="uploadError"></div>
+
+            <div id="progressWrap" class="hidden mt-24">
+                <p class="small muted" id="progressText">Uploading…</p>
+                <div style="background:#EEF1F8; border-radius:8px; height:10px; overflow:hidden;">
+                    <div id="progressBar" style="width:0%; background:#3454D1; height:100%; transition:width 0.2s;"></div>
+                </div>
+            </div>
+
+            <div id="resultsWrap" class="hidden mt-24">
+                <h3>Upload Results</h3>
+                <table>
+                    <thead><tr><th>Row</th><th>Name</th><th>Status</th></tr></thead>
+                    <tbody id="resultsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/bulk_upload.js"></script>
+</body>
+</html>

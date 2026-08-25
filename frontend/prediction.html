@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predict Performance · Student ML Analytics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Predict Performance</h1>
+                <p>Runs Random Forest + ANN + K-Means together via the Flask ML API.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <label for="studentSelect">Select Student</label>
+            <select id="studentSelect"><option value="">Loading students…</option></select>
+            <button class="btn mt-24" id="predictBtn" disabled>Predict Performance</button>
+            <div class="error-msg" id="predictError"></div>
+        </div>
+
+        <div id="resultSection" class="mt-24 hidden">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Risk Level</h3>
+                    <div class="gauge-wrap">
+                        <div class="gauge" id="gauge"></div>
+                        <div>
+                            <div class="gauge-label" id="gaugeLabel">–</div>
+                            <p class="small muted" id="gaugeSub"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Predicted Performance</h3>
+                    <p class="small muted" id="predictionHeadline"></p>
+                    <div id="probBars" class="mt-24"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-2 mt-24">
+                <div class="card">
+                    <h3>Model Comparison</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>Random Forest (Supervised)</td><td id="rfPred" class="mono"></td></tr>
+                            <tr><td>ANN (Neural Network)</td><td id="annPred" class="mono"></td></tr>
+                            <tr><td><strong>Combined Final Result</strong></td><td id="finalPred" class="mono"></td></tr>
+                        </tbody>
+                    </table>
+                    <h3 class="mt-24">Cluster (K-Means)</h3>
+                    <p id="clusterName" class="mono"></p>
+                </div>
+
+                <div class="card">
+                    <h3>Recommendations</h3>
+                    <ul class="recommend-list" id="recommendList"></ul>
+                </div>
+            </div>
+
+            <div class="card mt-24">
+                <h3>Why this prediction?</h3>
+                <p class="small muted">
+                    The features below are both influential in the model and below the class
+                    average for this student — they are the main drivers of the prediction.
+                </p>
+                <ul class="recommend-list" id="explanationList" style="margin-top:14px;"></ul>
+            </div>
+
+            <div class="mt-24" style="text-align:right;">
+                <button class="btn secondary" id="printBtn">Print / Save as PDF</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/prediction.js"></script>
+</body>
+</html>

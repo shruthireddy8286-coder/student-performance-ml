@@ -1,0 +1,25 @@
+params,mean_test_score,std_test_score
+"{'max_depth': 6, 'min_samples_split': 2, 'n_estimators': 100}",0.9396,0.0179
+"{'max_depth': 6, 'min_samples_split': 2, 'n_estimators': 200}",0.9396,0.0267
+"{'max_depth': 6, 'min_samples_split': 2, 'n_estimators': 300}",0.9354,0.0212
+"{'max_depth': 6, 'min_samples_split': 5, 'n_estimators': 100}",0.9333,0.0224
+"{'max_depth': 6, 'min_samples_split': 5, 'n_estimators': 200}",0.9438,0.0156
+"{'max_depth': 6, 'min_samples_split': 5, 'n_estimators': 300}",0.9438,0.0169
+"{'max_depth': 8, 'min_samples_split': 2, 'n_estimators': 100}",0.9354,0.0241
+"{'max_depth': 8, 'min_samples_split': 2, 'n_estimators': 200}",0.9354,0.0275
+"{'max_depth': 8, 'min_samples_split': 2, 'n_estimators': 300}",0.9375,0.0238
+"{'max_depth': 8, 'min_samples_split': 5, 'n_estimators': 100}",0.9354,0.0153
+"{'max_depth': 8, 'min_samples_split': 5, 'n_estimators': 200}",0.9375,0.0208
+"{'max_depth': 8, 'min_samples_split': 5, 'n_estimators': 300}",0.9396,0.025
+"{'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 100}",0.9354,0.0222
+"{'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 200}",0.9417,0.0276
+"{'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 300}",0.9417,0.0276
+"{'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 100}",0.9333,0.0193
+"{'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}",0.9375,0.0208
+"{'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 300}",0.9396,0.025
+"{'max_depth': None, 'min_samples_split': 2, 'n_estimators': 100}",0.9354,0.0241
+"{'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200}",0.9396,0.0267
+"{'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}",0.9417,0.0268
+"{'max_depth': None, 'min_samples_split': 5, 'n_estimators': 100}",0.9375,0.0208
+"{'max_depth': None, 'min_samples_split': 5, 'n_estimators': 200}",0.9375,0.0208
+"{'max_depth': None, 'min_samples_split': 5, 'n_estimators': 300}",0.9396,0.025

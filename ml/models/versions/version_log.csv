@@ -1,0 +1,2 @@
+timestamp,model_file,test_accuracy,cv_mean_accuracy,best_params
+20260825_065042,models/versions/random_forest_20260825_065042.pkl,0.9167,0.945,"{'max_depth': 6, 'min_samples_split': 5, 'n_estimators': 200}"

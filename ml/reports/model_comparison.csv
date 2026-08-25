@@ -1,0 +1,4 @@
+model,test_accuracy,cv_accuracy
+Random Forest,0.9166666666666666,0.945
+Logistic Regression,0.9333333333333333,0.9416666666666668
+SVM (RBF kernel),0.9333333333333333,0.95
